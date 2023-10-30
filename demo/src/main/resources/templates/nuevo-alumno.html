@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Añadir Alumno</title>
+</head>
+<body>
+<h1>Añadir Alumno</h1>
+<form
+        th:action="/agregar-alumno"
+        th:method="post"
+        th:object="${nuevoAlumno}">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" th:field="*{nombre}" /><br/>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" th:field="*{apellido}" /><br/>
+    <label for="edad">Edad:</label>
+    <input type="text" id="edad" name="edad" th:field="*{edad}" /><br/>
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" th:field="*{dni}" /><br/>
+    <input type="submit" value="Guardar" />
+</form>
+</body>
+</html>

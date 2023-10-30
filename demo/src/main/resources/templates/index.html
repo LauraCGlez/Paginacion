@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clase 2º DAM</title>
+</head>
+<body>
+<h1>Clase 2º DAM</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>DNI</th>
+    </tr>
+    <tr th:each="alumno : ${alumnos}">
+        <td th:text="${alumno.id}"></td>
+        <td th:text="${alumno.nombre}"></td>
+        <td th:text="${alumno.apellido}"></td>
+        <td th:text="${alumno.edad}"></td>
+        <td th:text="${alumno.dni}"></td>
+    </tr>
+</table>
+<a href="/nuevo-alumno">Añadir alumno</a>
+</body>
+</html>
